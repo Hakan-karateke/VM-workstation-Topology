@@ -1,0 +1,44 @@
+# VMware Workstation Network Configuration Guide
+# ========================================
+
+# 1. Create the following virtual networks in VMware:
+#    - VMnet1 (192.168.8.0/24) 
+#    - VMnet2 (192.168.3.0/24)
+#    - VMnet3 (200.175.2.0/24)
+#    - VMnet4 (192.168.20.0/24)
+
+# Steps to create virtual networks in VMware Workstation:
+# 1. Open VMware Workstation
+# 2. Go to Edit > Virtual Network Editor
+# 3. If prompted for administrator access, click "Yes"
+# 4. Click "Change Settings" to make changes
+# 5. For each of the networks (VMnet1, VMnet2, VMnet3, VMnet4):
+#    a. Select the VMnet from the list
+#    b. Check "Host-only" for the connection type
+#    c. Check "Use local DHCP service to distribute IP address to VMs"
+#    d. Set the Subnet IP to the corresponding network (e.g., 192.168.8.0 for VMnet1)
+#    e. Set the Subnet mask to 255.255.255.0
+# 6. Click "Apply" and then "OK"
+
+# VM Network Adapter Configuration:
+# ================================
+# 1. VM-ONOS/Ubuntu:
+#    - Add network adapter: VMnet1
+#
+# 2. VM-Mininet/Ubuntu:
+#    - Network adapter 1: VMnet1
+#    - Add network adapter 2: VMnet2
+#    - Add network adapter 3: VMnet3
+#    - Add network adapter 4: VMnet4
+#
+# 3. VM-Kali:
+#    - Network adapter: VMnet3
+#
+# 4. VM-Metasploitable-2:
+#    - Network adapter: VMnet2
+#
+# For each VM:
+# 1. Right-click the VM > Settings
+# 2. Select the Network Adapter option
+# 3. Select "Custom: Specific virtual network" and choose the appropriate VMnet
+# 4. Click "OK" to apply changes
