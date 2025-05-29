@@ -1,10 +1,11 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 """
 SCADA Network Monitor
 - Monitors network traffic in the SCADA network
 - Detects potential attacks
 - Logs traffic statistics
+- Compatible with Python 3.10
 """
 
 from scapy.all import *

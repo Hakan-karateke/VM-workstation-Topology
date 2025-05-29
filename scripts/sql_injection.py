@@ -1,9 +1,10 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 """
 SQL Injection Attack Script
 - Tests a web application for SQL injection vulnerabilities
 - Demonstrates common SQL injection techniques
+- Compatible with Python 3.10
 """
 
 import requests

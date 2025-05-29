@@ -1,13 +1,22 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 """
 Modbus Server for SCADA simulation
 This script implements a basic Modbus TCP server that simulates a SCADA device
+Compatible with Python 3.10
 """
 
-from pymodbus.server.sync import StartTcpServer
-from pymodbus.datastore import ModbusSequentialDataBlock
-from pymodbus.datastore import ModbusSlaveContext, ModbusServerContext
+# Import for newer versions of pymodbus (>=2.5.3)
+try:
+    # New import paths for pymodbus >= 3.0.0
+    from pymodbus.server import StartTcpServer
+    from pymodbus.datastore import ModbusSequentialDataBlock
+    from pymodbus.datastore import ModbusSlaveContext, ModbusServerContext
+except ImportError:
+    # Fallback for older versions
+    from pymodbus.server.sync import StartTcpServer
+    from pymodbus.datastore import ModbusSequentialDataBlock
+    from pymodbus.datastore import ModbusSlaveContext, ModbusServerContext
 import logging
 import threading
 import time

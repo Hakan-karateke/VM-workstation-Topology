@@ -1,11 +1,18 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 """
 Modbus Client for SCADA simulation
 This script implements a basic Modbus TCP client that connects to a SCADA server
+Compatible with Python 3.10
 """
 
-from pymodbus.client.sync import ModbusTcpClient
+# Import for newer versions of pymodbus (>=2.5.3)
+try:
+    # New import paths for pymodbus >= 3.0.0
+    from pymodbus.client import ModbusTcpClient
+except ImportError:
+    # Fallback for older versions
+    from pymodbus.client.sync import ModbusTcpClient
 import time
 import logging
 

@@ -1,9 +1,10 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 """
 TCP-SYN Flood Attack Script
 - Floods target with TCP SYN packets without completing the handshake
 - Quickly exhausts the target's connection resources
+- Compatible with Python 3.10
 """
 
 from scapy.all import *

@@ -1,10 +1,11 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 """
 SCADA Network Visualization
 - Visualizes the SCADA network topology
 - Shows traffic flows and potential attacks in real-time
 - Provides a web interface for monitoring the network
+- Compatible with Python 3.10
 """
 
 import os

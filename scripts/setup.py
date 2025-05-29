@@ -1,10 +1,11 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 """
 SCADA Network Setup Helper Script
 - Helps with the setup and configuration of the SCADA network topology
 - Installs required dependencies
 - Creates network configurations
+- Compatible with Python 3.10
 """
 
 import os
@@ -89,24 +90,22 @@ def check_dependencies_ubuntu():
     if not success:
         print("[!] Ryu not found. Installing...")
         run_command("sudo pip3 install ryu")
-    
-    # Check PyModbus
+      # Check PyModbus
     print("[*] Checking PyModbus installation...")
     success, output = run_command("pip3 list | grep pymodbus", verbose=False)
     if not success or "pymodbus" not in output.lower():
         print("[!] PyModbus not found. Installing...")
-        run_command("sudo pip3 install pymodbus")
-    
-    # Check Scapy
+        run_command("sudo pip3 install pymodbus>=3.0.0")
+      # Check Scapy
     print("[*] Checking Scapy installation...")
     success, output = run_command("pip3 list | grep scapy", verbose=False)
     if not success or "scapy" not in output.lower():
         print("[!] Scapy not found. Installing...")
-        run_command("sudo pip3 install scapy")
+        run_command("sudo pip3 install scapy>=2.5.0")
     
     # Additional dependencies for attack scripts
     print("[*] Installing additional dependencies...")
-    run_command("sudo pip3 install requests beautifulsoup4 fake_useragent")
+    run_command("sudo pip3 install requests>=2.28.0 beautifulsoup4>=4.11.0 fake-useragent>=1.1.0")
     
     print("[+] All dependencies for Ubuntu have been installed/verified.")
 
@@ -120,24 +119,22 @@ def check_dependencies_kali():
     if not success:
         print("[!] Python3 not found. Installing...")
         run_command("sudo apt-get update && sudo apt-get install -y python3 python3-pip")
-    
-    # Check PyModbus (for Modbus server/client)
+      # Check PyModbus (for Modbus server/client)
     print("[*] Checking PyModbus installation...")
     success, output = run_command("pip3 list | grep pymodbus", verbose=False)
     if not success or "pymodbus" not in output.lower():
         print("[!] PyModbus not found. Installing...")
-        run_command("sudo pip3 install pymodbus")
-    
-    # Check Scapy
+        run_command("sudo pip3 install pymodbus>=3.0.0")
+      # Check Scapy
     print("[*] Checking Scapy installation...")
     success, output = run_command("pip3 list | grep scapy", verbose=False)
     if not success or "scapy" not in output.lower():
         print("[!] Scapy not found. Installing...")
-        run_command("sudo pip3 install scapy")
+        run_command("sudo pip3 install scapy>=2.5.0")
     
     # Additional dependencies for attack scripts
     print("[*] Installing additional dependencies...")
-    run_command("sudo pip3 install requests beautifulsoup4 fake_useragent")
+    run_command("sudo pip3 install requests>=2.28.0 beautifulsoup4>=4.11.0 fake-useragent>=1.1.0")
     
     print("[+] All dependencies for Kali Linux have been installed/verified.")
 

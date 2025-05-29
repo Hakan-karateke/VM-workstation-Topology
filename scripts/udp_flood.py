@@ -1,9 +1,10 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 """
 UDP Flood Attack Script
 - Floods target with UDP packets
 - Used for network stress testing
+- Compatible with Python 3.10
 """
 
 from scapy.all import *

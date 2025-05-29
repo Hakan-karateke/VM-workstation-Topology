@@ -1,9 +1,10 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 """
 TCP-ACK Flood Attack Script
 - Floods target with TCP ACK packets
 - Used for network stress testing
+- Compatible with Python 3.10
 """
 
 from scapy.all import *

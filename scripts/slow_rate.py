@@ -1,9 +1,10 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 """
 Slow-Rate Attack Script (Slowloris variant)
 - Creates connections to the server and sends partial requests at a very slow rate
 - Used to exhaust server connection pool
+- Compatible with Python 3.10
 """
 
 import socket

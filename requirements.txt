@@ -1,20 +1,21 @@
 # Python package requirements for SCADA Network Topology and Attack Simulation
+# Compatible with Python 3.10
 
 # Core dependencies
-scapy>=2.4.5
-pymodbus>=2.5.3
-requests>=2.25.1
-beautifulsoup4>=4.9.3
-fake-useragent>=0.1.11
+scapy>=2.5.0
+pymodbus>=3.0.0
+requests>=2.28.0
+beautifulsoup4>=4.11.0
+fake-useragent>=1.1.0
 
 # Visualization dependencies
-flask>=2.0.1
-plotly>=5.3.1
+flask>=2.2.0
+plotly>=5.10.0
 
 # SDN controller
 ryu>=4.34
 
 # Optional dependencies
-paramiko>=2.9.2  # SSH capabilities
+paramiko>=3.0.0  # SSH capabilities
 netaddr>=0.8.0   # IP address manipulation
 python-nmap>=0.7.1  # For more advanced port scanning

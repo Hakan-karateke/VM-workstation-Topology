@@ -1,9 +1,10 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 """
 Port Scanning Tool
 - Scans for open ports on target hosts
 - Multiple scanning techniques: TCP Connect, SYN, UDP, and FIN scanning
+- Compatible with Python 3.10
 """
 
 from scapy.all import *

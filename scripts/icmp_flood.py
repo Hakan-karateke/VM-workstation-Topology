@@ -1,9 +1,10 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 """
 ICMP Flood (Ping Flood) Attack Script
 - Floods target with ICMP Echo Request packets
 - Can overwhelm the target's network resources
+- Compatible with Python 3.10
 """
 
 from scapy.all import *

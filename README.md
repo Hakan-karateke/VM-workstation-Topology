@@ -226,11 +226,36 @@ These scripts are intended for educational purposes and security testing in cont
 
 ## Requirements
 
-- Python 3.6+
-- Scapy
-- PyModbus
-- Requests
-- BeautifulSoup4
-- Flask (for visualization)
+- Python 3.10 (All scripts updated for compatibility)
+- Scapy >= 2.5.0
+- PyModbus >= 3.0.0
+- Requests >= 2.28.0
+- BeautifulSoup4 >= 4.11.0
+- Flask >= 2.2.0 (for visualization)
 - Mininet
 - Ryu Controller
+
+## Installation for Python 3.10
+
+To install all required dependencies for Python 3.10, run:
+
+```bash
+chmod +x install_py310_deps.sh
+./install_py310_deps.sh
+```
+
+This will create a Python virtual environment with all required packages.
+
+## Running Scripts with Python 3.10
+
+You can run any script with Python 3.10 using the provided helper script:
+
+```bash
+chmod +x run_with_py310.sh
+./run_with_py310.sh <script_name.py> [arguments]
+```
+
+For example:
+```bash
+./run_with_py310.sh scada_topology.py
+```

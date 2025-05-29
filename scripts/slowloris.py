@@ -1,9 +1,10 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 """
 Slowloris Attack Script
 - Opens multiple connections to the target server and keeps them open as long as possible
 - Exhausts the connection pool of the server by sending partial HTTP requests
+- Compatible with Python 3.10
 """
 
 import socket

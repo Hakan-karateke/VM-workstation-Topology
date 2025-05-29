@@ -1,9 +1,10 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 """
 SCADA Network Topology with Mininet
 - Creates a network with SDN Controller and multiple hosts
 - Implements a SCADA network topology for attack simulation
+- Compatible with Python 3.10
 """
 
 from mininet.net import Mininet
@@ -68,14 +69,13 @@ def scadaNetworkTopology():
     
     # Run post-configuration commands
     info('*** Running post-configuration commands\n')
-    
-    # Start Modbus server on kali2
+      # Start Modbus server on kali2
     info('*** Starting Modbus server on kali2\n')
-    kali2.cmd('python /home/ubuntu/scripts/modbus_server.py &')
+    kali2.cmd('python3 /home/ubuntu/scripts/modbus_server.py &')
     
     # Start Modbus client on mininet2
     info('*** Starting Modbus client on mininet2\n')
-    mininet2.cmd('python /home/ubuntu/scripts/modbus_client.py &')
+    mininet2.cmd('python3 /home/ubuntu/scripts/modbus_client.py &')
     
     info('*** Network is ready\n')
     

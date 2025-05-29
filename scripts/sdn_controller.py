@@ -1,8 +1,9 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 """
 Simple SDN Controller using Ryu
 This script implements a basic OpenFlow controller for our SCADA network
+Compatible with Python 3.10
 """
 
 from ryu.base import app_manager

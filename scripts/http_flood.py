@@ -1,9 +1,10 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 """
 HTTP Flood Attack Script
 - Floods target web server with HTTP requests
 - Used for application layer stress testing
+- Compatible with Python 3.10
 """
 
 import requests
